@@ -4,3 +4,10 @@ function findMatching(list, name){
     return drivername.toLowerCase() === name.toLowerCase();
   });
 }
+
+function fuzzyMatch(list, partialName){
+  let lengthOfName = partialName.length
+  return list.filer(function (drivername){
+    return drivername.slice(0, lengthOfName) === partialName
+  })
+}
