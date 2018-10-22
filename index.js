@@ -5,9 +5,9 @@ function findMatching(list, name){
   });
 }
 
-function fuzzyMatch(list, partialName) {
+function fuzzyMatch (list, partialName) {
   let lengthOfName = partialName.length;
-  return list.filer(function (drivername) {
-    return drivername.slice(0, lengthOfName) === partialName;
+  return list.filter(function (driverName) {
+    return driverName.slice(0, lengthOfName) === partialName;
   });
 }
