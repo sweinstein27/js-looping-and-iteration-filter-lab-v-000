@@ -13,7 +13,7 @@ function fuzzyMatch (list, partialName) {
 }
 
 function matchName (list, name) {
-  return list.filter(function (driverName){
-    return driverName === name
-  })
+  return list.filter(function (driver){
+    return driver.name === name;
+  });
 }
